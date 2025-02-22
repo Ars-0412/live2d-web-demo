@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2015", "DOM"],
+    "esModuleInterop": true,
+    "strict": false,
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "paths": {
+      "@framework/*": ["Framework/src/*"],
+      "Live2DCubismCore": ["Framework/src/Live2DCubismCore/live2dcubismcore"]
+    },
+    "allowSyntheticDefaultImports": true
+  }
+}
