@@ -1,22 +1,23 @@
+
+import { defineConfig } from 'vite';
 import path from 'path';
 
-const _filename = new URL(import.meta.url).pathname;
-const _dirname = path.dirname(_filename);
-
-export default {
-  base: '/live2d-web-demo/', // GitHub Pages 用にリポジトリ名と一致させる
+export default defineConfig({
   resolve: {
     alias: {
-      '@framework': path.resolve(_dirname, 'src/framework')
+      '@framework': path.resolve(__dirname, 'Framework/src')
     }
   },
   build: {
-    outDir: 'dist',
-    assetsDir: '',
+    outDir: "dist",
     rollupOptions: {
-      output: {
-        entryFileNames: '[name].js',
+      input: {
+        main: path.resolve(__dirname, 'src/main.ts')
       },
-    },
-  },
-};
+      output: {
+        entryFileNames: "assets/[name].js"
+      }
+    }
+  }
+});
+    

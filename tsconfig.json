@@ -4,7 +4,7 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "lib": [
-      "ES2015",
+      "ES2020",
       "DOM"
     ],
     "esModuleInterop": true,
@@ -19,7 +19,8 @@
         "./Core/Live2DCubismCore/live2dcubismcore"
       ]
     },
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "outDir": "dist"
   },
   "include": [
     "src/**/*",
