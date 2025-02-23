@@ -1,3 +1,4 @@
+import "/live2dcubismcore.js";
 import './style.css';
 /**
  * Copyright(c) Live2D Inc. All rights reserved.
