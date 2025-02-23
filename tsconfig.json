@@ -3,15 +3,26 @@
     "target": "ES2015",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "lib": ["ES2015", "DOM"],
+    "lib": [
+      "ES2015",
+      "DOM"
+    ],
     "esModuleInterop": true,
     "strict": false,
     "skipLibCheck": true,
     "baseUrl": "./",
     "paths": {
-      "@framework/*": ["Framework/src/*"],
-      "Live2DCubismCore": ["Framework/src/Live2DCubismCore/live2dcubismcore"]
+      "@framework/*": [
+        "Framework/src/*"
+      ],
+      "Live2DCubismCore": [
+        "./Core/Live2DCubismCore/live2dcubismcore"
+      ]
     },
     "allowSyntheticDefaultImports": true
-  }
+  },
+  "include": [
+    "src/**/*",
+    "Framework/src/**/*"
+  ]
 }
