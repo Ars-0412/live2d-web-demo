@@ -1,3 +1,4 @@
+import "../live2dcubismcore.js";
 import "/live2dcubismcore.js";
 import './style.css';
 /**
