@@ -2,8 +2,15 @@ import { defineConfig } from 'vite';
 import path from 'path';
 
 export default defineConfig({
-          assetsInclude: ["**/*.js", "**/*.wasm"],
   assetsInclude: ["**/*.js", "**/*.wasm"],
+  
+  
+  
+  
+  publicDir: "public",
+  base: "/live2d-web-demo/",
+          
+  
   base: './',
   resolve: {
     alias: {
