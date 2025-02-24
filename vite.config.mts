@@ -1,10 +1,10 @@
 import { defineConfig } from "vite";
-import path from "path";
+import path from "node:path"; // "path" の代わりに "node:path" を使う
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   assetsInclude: ["**/*.js", "**/*.wasm"],
   publicDir: "public",
-  base: "/live2d-web-demo/",
+  base: command === "build" ? "/live2d-web-demo/" : "./", // GitHubでは"/live2d-web-demo/"、ローカルでは"./"
   build: {
     outDir: "dist",
     rollupOptions: {
@@ -16,7 +16,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "@framework": path.resolve(__dirname, "Framework/src"),
+      "@framework": path.resolve(process.cwd(), "Framework/src"), // __dirname の代わりに process.cwd() を使う
     },
   },
-});
+}));
