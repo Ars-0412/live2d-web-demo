@@ -10,15 +10,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: "18"
+          cache: "npm"
 
       - name: Install dependencies
         run: npm install
+
+      - name: Install Vite globally
+        run: npm install -g vite
+
+      - name: Fix Vite permissions
+        run: chmod +x node_modules/.bin/vite
 
       - name: Build project
         run: npm run build
