@@ -3,24 +3,18 @@
     "target": "ES2015",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "lib": [
-      "ES2020",
-      "DOM"
-    ],
+    "lib": ["ES2020", "DOM"],
     "esModuleInterop": true,
     "strict": false,
     "skipLibCheck": true,
     "baseUrl": "./",
     "paths": {
-      "@framework/*": [
-        "Framework/src/*"
-      ],
-      "Live2DCubismCore": [
-        "./Core/Live2DCubismCore/live2dcubismcore"
-      ]
+      "@framework/*": ["Framework/src/*"],
+      "Live2DCubismCore": ["./Core/Live2DCubismCore/live2dcubismcore"]
     },
     "allowSyntheticDefaultImports": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "types": ["node"] // ✅ 追加: "process" のエラー解消
   },
   "include": [
     "src/**/*",
