@@ -5,6 +5,7 @@
     "start": "vite --host",
     "build": "tsc --noEmit && vite build --mode development",
     "build:prod": "node copy_resources.js && vite build",
+    "preview": "vite preview --port 5000 --host",
     "copy_resources": "node copy_resources.js",
     "test": "tsc --noEmit",
     "lint": "eslint",

@@ -5,7 +5,7 @@ export default defineConfig(({ command }) => ({
   assetsInclude: ["**/*.js", "**/*.wasm"],
 
   publicDir: "public",
-  base: command === "build" ? "/live2d-web-demo/" : "./", // GitHub Pages では "/live2d-web-demo/"、ローカルでは "./"
+  base: "/live2d-web-demo/",
 
   build: {
     outDir: "dist",
